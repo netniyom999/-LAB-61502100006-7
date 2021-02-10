@@ -10,8 +10,6 @@
 <h3>แก้ไขภาพยนต์ <small><a href=".">ย้อนกลับ</a></small></h3>
 
 <form action="update.php" method="post">
-    <label for="student_id">รหัสภาพยนต์ : </label>
-    <?php echo $row['movie_id']; ?>
     <input type="hidden" name="movie_id" id="movie_id" value="<?php echo $row['movie_id']; ?>">
     <br>
     <br>

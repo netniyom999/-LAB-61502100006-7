@@ -13,7 +13,9 @@
     $result = $conn->query($sql); 
 ?>
 
-
+<form action="." method="post">
+    <button type="submit" name="logout">ออกจากระบบ</button>
+</form>
 <form action="" method="get">
   <label for="search">ช่องค้นหา</label>
   <input type="text" name="search" id="search" placeholder="ช่องค้นหา...">
@@ -22,7 +24,6 @@
 <a href="insert_from.php">เพิ่มภาพยนต์</a>
 <table style="width:100%" border = "1">
   <tr>
-    <th>รหัสภาพยนต์</th>
     <th>ชื่อภาพยนต์</th>
     <th>เวลาที่เริ่มฉาย</th>
     <th>ชื่อผู้ใช้งาน</th>
@@ -34,7 +35,6 @@
     while($row = $result->fetch_assoc()) {
 ?>
  <tr>
-    <td><?php echo $row['movie_id']; ?></td>
     <td><?php echo $row['movie_name']; ?></td>
     <td><?php echo $row['movie_time']; ?></td>
     <td><?php echo $row['movie_cname']; ?></td>
